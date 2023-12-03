@@ -1,0 +1,308 @@
+/*ESTILOS GLOBALES*/
+*::after,*::before, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*max-width: 1200px;*/
+    font-family:'Lato';
+    margin: 0 auto;
+    color: #333;
+}
+
+.icon-card{
+    width: 40px;
+    height: 40px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.card{
+    max-width: fit-content;
+}
+
+/*HEADER CON ANIMACIÓN*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+    background-image: linear-gradient( 58.2deg,  #285bd4ba -3%, #ab35a373 49.3%, #ffcc705e 97.7% );
+}
+
+header .logo{
+    margin-left: 20px;
+}
+
+header img{
+    margin-left: 15px;
+}
+
+.container-icon{
+    margin-right: 20px;
+    justify-items: end;
+}
+
+/*BARRA DE NAVEGACIÓN CON ANIMACIÓN*/
+.navbar{
+    background-image: linear-gradient(135deg, #285bd4ba, #ab35a373, #ffcc705e, #285bd4ba);
+    background-size: 500%;
+    animation: fanimado 5s infinite;
+    /*background-image: radial-gradient( circle 588px at 31.7% 40.2%,  rgba(225,200,239,1) 21.4%, rgba(163,225,233,1) 57.1% );*/
+    text-align: center !important;
+}
+
+@keyframes fanimado {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/*PARA LOS BOTONES DE PRODUCTOS*/
+.original-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #474444;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border-bottom: 5px solid #734a91;
+    transition: 0.3s;
+    background-color: #e0b0ff;
+  }
+  
+  .original-button:hover {
+    border-bottom-width: 0;
+    transform: translateY(5px);
+    background-image: linear-gradient(135deg, #285bd4ba, #ab35a373, #ffcc705e, #285bd4ba);
+    color: white;
+  }
+
+  /*BOTONES DE PRÓXIMOS ALBUMES*/
+  .original-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #ab35a373;
+    font-size: 18px;
+    border-radius: 0px;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  
+  .original-button2::before, .original-button2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #ab35a373;
+    transition: .3s;
+  }
+  
+  .original-button2::before {
+    top: 0;
+  }
+  
+  .original-button2::after {
+    bottom: 0;
+  }
+  
+  .original-button2:hover::before {
+    transform: translateX(-100%);
+  }
+  
+  .original-button2:hover::after {
+    transform: translateX(100%);
+  }
+
+/*PARA TODAS LAS TARJETAS*/
+.card{
+    margin: 10%;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+}
+
+/*ESTILOS DE LOS TÍTULOS*/
+.blockquote{
+    color: #5F7DAF;
+    text-align: center !important;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+/*PIE DE PÁGINA*/
+.pie-pagina{
+    width: 100%;
+    background-image: linear-gradient( 58.2deg,  #285bd4ba -3%, #ab35a373 49.3%, #ffcc705e 97.7% );
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+.pie-pagina .grupo-1 .box p{
+    margin-bottom: 10px;
+ }
+ .pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 10px;
+    background-color: #e0b0ff;
+    text-align: center;
+    transition: all 300ms ease;
+ }
+ .pie-pagina .grupo-2{
+    background-color: #734a91;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+ }
+ .pie-pagina .grupo-2 small{
+    font-size: 15px;
+ }
+ @media screen and (max-width:800px) {
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+ }
+
+/*ANIMACIÓN DE LA PÁGINA GENERAL*/
+@keyframes show{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+img{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}
+/*LADO IZQUIERDO*/
+.ladoIZQ{
+    padding: 10px;
+    text-align: center;
+    flex: 30%;
+    border-right: 3px solid #fca89d;
+}
+
+.título-izq{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #687B8C;
+    text-align: center;
+    margin-top: 300px;
+}
+
+#mbIZQ p{
+    margin-bottom: 100px;
+}
+
+/*------------------*/
+.contenedor{
+    display: grid;
+    justify-content: center;
+    position: center;
+
+}
+.seccion-imagenes{
+    display: flex;
+    width: 600px;
+    height: 430px;
+    margin-top: 50px;
+}
+.seccion-imagenes img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+.seccion-imagenes img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.subindice{
+    font-size: 30px;
+    display: grid;
+    justify-content: center;
+    position: center;
+    margin-top: 25px;
+}
+
+.seccion6{
+    margin-bottom: 100px;
+    margin-top: -120px;
+}
+
+.seccion6 .card{
+    border: none;
+    width: auto;
+    height: 600px;
+}
+.seccion6 .card1{
+    margin-top: 85px;
+}
