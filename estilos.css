@@ -139,8 +139,6 @@ header img{
 /*PARA TODAS LAS TARJETAS*/
 .card{
     margin: 10%;
-    margin-left: 100px;
-    margin-right: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -155,7 +153,7 @@ header img{
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 70px;
+    margin-top: 25px;
 }
 
 /*PIE DE PÁGINA*/
@@ -295,7 +293,6 @@ img{
 
 .seccion6{
     margin-bottom: 100px;
-    margin-top: -120px;
 }
 
 .seccion6 .card{
@@ -305,4 +302,37 @@ img{
 }
 .seccion6 .card1{
     margin-top: 85px;
+}
+
+@media (min-width:280px) and (max-width: 653px){
+    .contenedor{
+        width: 200px;
+        height: auto;
+        display: grid;
+        justify-content: center;
+        position: center;
+        margin-left: 40px;
+    }
+    .seccion-imagenes{
+        display: flex;
+        width: 250px;
+        height: auto;
+        margin-top: 50px;
+    }
+    .seccion-imagenes img{
+        width: 0;
+        flex-grow: 1;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: 0.5s ease;
+    }
+    .seccion-imagenes img:hover{
+        cursor: crosshair;
+        width: 280px;
+        opacity: 1;
+        filter: contrast(120%);
+    }
+    .subindice{
+        font-size: 16px;
+    }
 }
