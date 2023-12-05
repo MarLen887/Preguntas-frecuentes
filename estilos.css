@@ -10,6 +10,7 @@ body{
     font-family:'Lato';
     margin: 0 auto;
     color: #333;
+    text-align: justify;
 }
 
 .icon-card{
